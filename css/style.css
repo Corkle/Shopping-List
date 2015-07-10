@@ -1,0 +1,61 @@
+#site-content {
+    width: 18.75em;
+    margin: 20px auto 0 auto;
+}
+
+.item-list {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #7cc7c7;
+    padding: 20px 0;
+}
+
+.item-list li {
+    width: 80%;
+    padding: 5px 0 5px 0;
+    margin: 0 auto 5px auto;
+    background-color: #2fa27b;
+    border-radius: 50px;
+    border: 2px solid #0c885e;
+}
+
+.item-list input {
+    margin-left: 25px;
+    margin-right: 15px;
+}
+
+.item-list p {
+    margin: 0;
+    color: white;
+    font-size: 28px;
+}
+
+.top-buttons-bar {
+    height: 50px;
+    background-color: #2fa27b;
+}
+
+.add-item-container {
+    height: 50px;
+    background-color: #59dbdb;
+}
+
+.top-buttons-bar .buttons {
+    float: right;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+}
+
+.top-buttons-bar .buttons li {
+    display: inline-block;
+}
+
+.top-buttons-bar .buttons li div {
+    height: 30px;
+    width: 30px;
+    background-color: #92f5f5;
+    border-radius: 25%;
+}
