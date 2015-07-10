@@ -1,6 +1,8 @@
 #site-content {
     width: 100%;
     margin: 0 auto 0 auto;
+    box-sizing: border-box;
+    min-width: 500px;
 }
 
 .item-list {
@@ -14,10 +16,10 @@
 .item-list li {
     width: 80%;
     padding: 5px 0 5px 0;
-    margin: 0 auto 5px auto;
+    margin: 0 auto 10px auto;
     background-color: #2fa27b;
     border-radius: 50px;
-    border: 2px solid #0c885e;
+    border: 5px solid #0c885e;
 }
 
 .item-list input {
@@ -25,37 +27,63 @@
     margin-right: 15px;
 }
 
+.item-list .checkbox {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 25%;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0 30px 0 10%;
+}
+
 .item-list p {
     margin: 0;
     color: white;
-    font-size: 28px;
+    font-size: 60px;
+    display: inline-block;
 }
 
 .top-buttons-bar {
-    height: 50px;
+    height: 80px;
     background-color: #2fa27b;
 }
 
 .add-item-container {
-    height: 50px;
+    height: 80px;
     background-color: #59dbdb;
+    display: none;
 }
 
-.top-buttons-bar .buttons {
+.top-buttons-bar > div {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top-buttons-bar div .buttons {
     float: right;
     margin: 0;
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
+    line-height: 0;
 }
 
 .top-buttons-bar .buttons li {
     display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .top-buttons-bar .buttons li div {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     background-color: #92f5f5;
-    border-radius: 25%;
+    border: 3px solid #009090;
+    border-radius: 25%;    
+}
+
+.item-checked .checkbox {
+    background-color: darkgray;
 }
