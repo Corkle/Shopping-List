@@ -22,14 +22,16 @@ body {
 
 .item-list li {
     width: 80%;
+/*    line-height: 0;*/
+    height: 90px;
     padding: 5px 0 5px 0;
     margin: 0 auto 10px auto;
     background-color: #2fa27b;
     border-radius: 50px;
     border: 5px solid #0c885e;
-    overflow: hidden;
 }
 
+.item-list .delete-checkbox,
 .item-list .checkbox {
     background-color: white;
     border: 2px solid black;
@@ -39,6 +41,21 @@ body {
     margin: 0 30px 0 10%;
     display: inline-block;
     overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item-list li > div {
+    height: 100%;
+}
+
+.item-list .delete-checkbox {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #a81010;
+    background-color: #fff49e;
+/*    display: none;*/
 }
 
 .item-list p {
@@ -95,6 +112,7 @@ body {
     margin: 0 10px;
 }
 
+.delete-checkbox i,
 .checkbox i {
     margin: 0 auto;
     display: none;
@@ -119,6 +137,7 @@ body {
 
 li.delete-mode {
     background-color: #ff8e48;
+    border-color: #fff472;
 }
 
 .buttons div i {
@@ -131,8 +150,6 @@ li.delete-mode {
     top: 50%;
     -webkit-transform: translateY(-50%);
 }
-
-
 
 .add-item-container > div {
     height: 100px;

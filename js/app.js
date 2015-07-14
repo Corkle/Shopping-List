@@ -34,4 +34,12 @@ function main() {
         $('#add-item-button').show();
         $('#delete-item-button').show();
     })
+    
+    $('ul.item-list .checkbox').click(function() {
+        if ($(this).parent().hasClass('item-checked')) {
+            $(this).parent().removeClass('item-checked');
+        } else {
+            $(this).parent().addClass('item-checked');
+        }
+    })
 }
