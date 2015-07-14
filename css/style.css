@@ -29,6 +29,8 @@ body {
     background-color: #2fa27b;
     border-radius: 50px;
     border: 5px solid #0c885e;
+    overflow: hidden;
+    word-break: break-all;
     /*    box-sizing: border-box;*/
 }
 
@@ -155,6 +157,33 @@ li.delete-item-checked {
     -webkit-transform: translateY(-50%);
 }
 
+.empty-list-notice {
+    opacity: .6;
+    height: 95px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #59dbdb;
+    border: 5px solid #097e7e;
+    border-radius: 50px;
+    display: none;
+}
+
+.empty-list-notice > div {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+}
+
+.empty-list-notice p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 30px;
+}
+
 .add-item-container {
     background-color: #59dbdb;
     display: none;
@@ -162,12 +191,6 @@ li.delete-item-checked {
     margin: 20px auto 0 auto;
     border: 5px solid #097e7e;
     border-radius: 50px;
-}
-
-.add-item-text {
-    display: none;
-    line-height: 0;
-    padding-bottom: 15px;
 }
 
 .add-item-container > div:first-child {
@@ -180,6 +203,8 @@ li.delete-item-checked {
     width: 80%;
     margin: 0 auto;
     clear: both;
+    height: 100%;
+    display: none;
 }
 
 .add-item-container div input {
@@ -196,7 +221,7 @@ li.delete-item-checked {
     float: right;
 }
 
-.add-item-container div > .button {
+.add-item-container div .button {
     background-color: #10a5a5;
     border: 3px solid #097e7e;
     border-radius: 25%;
@@ -251,8 +276,8 @@ li.delete-item-checked {
     background-color: white;
 }
 
-.add-button:hover,
-.cancel-button:hover {
+.add-item-container .add-button:hover,
+.add-item-container .cancel-button:hover {
     background-color: #0c885e;
 }
 
@@ -307,4 +332,9 @@ li.delete-item-checked {
 
 #confirm-delete-button:active {
     background-color: black;
+}
+
+.button:hover {
+    cursor: pointer;
+    cursor: hand;
 }

@@ -25,37 +25,43 @@
                 </div>
                 <ul class='buttons'>
                     <li>
-                        <div id='delete-item-button'><i class="fa fa-trash"></i>
-                        </div>
+                        <div class='button' id='delete-item-button' title='Delete Items'><i class="fa fa-trash"></i>
+                            </div>
                     </li>
                     <li>
-                        <div id='add-item-button'><i class="fa fa-plus"></i>
-                        </div>
+                        <div class='button' id='add-item-button'title='New Item'><i class="fa fa-plus"></i>
+                            </div>
                     </li>
                     <li>
-                        <div id='cancel-delete-button' style="display: none"><i class="fa fa-times"></i>
-                        </div>
+                        <div class='button' id='cancel-delete-button' style="display: none" title='Cancel'><i class="fa fa-times"></i>
+                            </div>
                     </li>
                     <li>
-                        <div id='confirm-delete-button' style="display: none"><i class="fa fa-trash"></i>
-                        </div>
+                        <div class='button' id='confirm-delete-button' style="display: none" title='Delete Selected'><i class="fa fa-trash"></i>
+                            </div>
                     </li>
                 </ul>
             </div>
         </div>
 
+        <div class='empty-list-notice'>
+            <div>
+                <p>Your shopping list is empty! Click the <i class="fa fa-plus"></i> button to add items to your list.</p>
+            </div>
+        </div>
+
         <div class='add-item-container'>
-                <div>
-                    <div class='button add-button'>
-                        <p>ADD</p>
-                    </div>
-                    <div class='button cancel-button'><i class="fa fa-times"></i>
-                    </div>
-                    <input type='text' id='add-item-textbox'>
+            <div>
+                <div class='button add-button' title='Add to List'>
+                    <p>ADD</p>
                 </div>
-                <div class='add-item-text'>
-                    <p>Enter a new item in the textbox, then click ADD</p>
-                </div>
+                <div class='button cancel-button' title='Cancel'><i class="fa fa-times"></i>
+                    </div>
+                <input type='text' id='add-item-textbox'>
+            </div>
+            <div class='add-item-text'>
+                <p>Enter a new item in the textbox, then click ADD</p>
+            </div>
         </div>
 
         <div class='delete-items-container' style='display: none'>
@@ -68,6 +74,7 @@
 
 
         <ul class='item-list'>
+            
             <li class='item-checked'>
                 <div class='delete-checkbox'><i class="fa fa-times"></i>
                 </div>
@@ -82,6 +89,7 @@
                 </div>
                 <p>Oranges</p>
             </li>
+
         </ul>
 
     </div>

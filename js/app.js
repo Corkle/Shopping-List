@@ -6,13 +6,17 @@ function setTopBarButtons() {
     $('#add-item-button').show();
     if ($('.item-list li').length > 0) {
         $('#delete-item-button').show();
+        $('.empty-list-notice').hide();
     } else {
         $('#delete-item-button').hide();
+        $('.empty-list-notice').show();
     }
 }
 
 function main() {
     var viewState = true;
+    
+    setTopBarButtons();
 
     $('.top-buttons-bar')
         .on('click', '#add-item-button', function () {
@@ -21,6 +25,7 @@ function main() {
             $('#add-item-textbox').focus();
             $(this).hide();
             $('#delete-item-button').hide();
+            $('.empty-list-notice').hide();
         })
         .on('click', '#delete-item-button', function () {
             viewState = false;
@@ -70,7 +75,7 @@ function main() {
         .on('click', '.add-button', function () {
             var newItemText = $('#add-item-textbox').val();
             if (newItemText.length > 0) {
-                $('ul.item-list').append('<li><div class="delete-checkbox"><i class="fa fa-times"></i></div><div class="checkbox"><i class="fa fa-check"></i></div><p>' + newItemText + '</p></li>');
+                $('ul.item-list').prepend('<li><div class="delete-checkbox"><i class="fa fa-times"></i></div><div class="checkbox"><i class="fa fa-check"></i></div><p>' + newItemText + '</p></li>');
                 $('.cancel-button').click();
             } else {
                 $('#add-item-textbox').focus();
