@@ -1,5 +1,5 @@
 body {
-    background-color: #7cc7c7;
+    background-color: #EBEBF2;
 }
 
 #site-content {
@@ -9,14 +9,25 @@ body {
     box-sizing: border-box;
     min-width: 800px;
     font-size: 28px;
+    color: #262626;
     font-family: 'Indie Flower', cursive;
+}
+
+.button {
+    background-color: #33667F;
+    border: 4px solid #D9D9D9;
+}
+
+.button p,
+.button i {
+    color: #D9D9D9;
 }
 
 .item-list {
     list-style: none;
     width: 100%;
     margin: 0 auto;
-    background-color: #7cc7c7;
+/*    background-color: #7cc7c7;*/
     padding: 20px 0;
 }
 
@@ -26,9 +37,9 @@ body {
     height: 90px;
     padding: 5px 0 5px 0;
     margin: 0 auto 10px auto;
-    background-color: #2fa27b;
+    background-color: #D9D9D9;
     border-radius: 50px;
-    border: 5px solid #0c885e;
+    border: 5px solid #BFBFBF;
     overflow: hidden;
     word-break: break-all;
     /*    box-sizing: border-box;*/
@@ -36,8 +47,8 @@ body {
 
 .item-list .delete-checkbox,
 .item-list .checkbox {
-    background-color: white;
-    border: 2px solid black;
+    background-color: #EBEBF2;
+    border: 3px solid #262626;
     border-radius: 25%;
     width: 50px;
     height: 50px;
@@ -61,7 +72,7 @@ body {
 
 .item-list p {
     margin: 0;
-    color: white;
+    color: 262626;
     font-size: 60px;
     vertical-align: middle;
     display: inline-block;
@@ -69,7 +80,7 @@ body {
 
 .top-buttons-bar {
     height: 120px;
-    background-color: #2fa27b;
+    background-color: #262626;
     font-size: 0;
 }
 
@@ -99,10 +110,36 @@ body {
 .top-buttons-bar .buttons li div {
     height: 70px;
     width: 70px;
-    background-color: #92f5f5;
-    border: 3px solid #009090;
     border-radius: 25%;
     margin: 0 10px;
+}
+
+.top-buttons-bar div > div {
+    margin: 0 auto;
+    padding-right: 30px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+}
+
+.top-buttons-bar p {
+    font-size: 60px;
+    color: #D9D9D9;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.buttons div i {
+    font-size: 55px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
 }
 
 .delete-checkbox i,
@@ -116,15 +153,17 @@ body {
 }
 
 .item-checked .checkbox {
-    background-color: darkgray;
+    background-color: #D9D9D9;
+    border-color: #a7a7a7;
 }
 
 .item-checked .checkbox i {
     display: block;
+    color: #262626;
 }
 
 .item-checked p {
-    color: lightgray;
+    color: #a7a7a7;
     text-decoration: line-through;
 }
 
@@ -146,25 +185,14 @@ li.delete-item-checked {
     background-color: #d26767;
 }
 
-.buttons div i {
-    font-size: 55px;
-    color: #007c7c;
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-}
-
 .empty-list-notice {
     opacity: .6;
     height: 95px;
     width: 80%;
     margin: 20px auto;
     text-align: center;
-    background-color: #59dbdb;
-    border: 5px solid #097e7e;
+    background-color: #26221E;
+    border: 5px solid #595552;
     border-radius: 50px;
     display: none;
 }
@@ -178,6 +206,7 @@ li.delete-item-checked {
 }
 
 .empty-list-notice p {
+    color: #8C877D;
     margin: 0;
     font-weight: bold;
     font-size: 36px;
@@ -185,11 +214,11 @@ li.delete-item-checked {
 }
 
 .add-item-container {
-    background-color: #59dbdb;
+    background-color: #BFBFBF;
     display: none;
     width: 90%;
     margin: 20px auto 0 auto;
-    border: 5px solid #097e7e;
+    border: 5px solid #262626;
     border-radius: 50px;
 }
 
@@ -210,8 +239,8 @@ li.delete-item-checked {
 .add-item-container div input {
     font-size: 50px;
     width: 55%;
-    border: 3px solid #097e7e;
-    box-shadow: inset 1px 1px 2px 0 #097e7e;
+    border: 3px solid #262626;
+    box-shadow: inset 1px 1px 2px 0 #BFBFBF;
     text-align: center;
     padding: 5px;
     display: inline-block;
@@ -222,10 +251,8 @@ li.delete-item-checked {
 }
 
 .add-item-container div .button {
-    background-color: #10a5a5;
-    border: 3px solid #097e7e;
+    border-color: #262626;
     border-radius: 25%;
-    color: white;
     display: inline-block;
     position: relative;
     top: 50%;
@@ -247,38 +274,23 @@ li.delete-item-checked {
 }
 
 .add-item-container div p {
+    color: #262626;
     font-weight: bold;
     text-align: center;
     margin: 0;
     padding: 10px;
 }
 
-.top-buttons-bar div > div {
-    margin: 0 auto;
-    padding-right: 30px;
-    display: inline-block;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
+.add-item-container div i {
+    color: #262626;
 }
 
-.top-buttons-bar p {
-    font-size: 60px;
-    padding: 0;
-    margin: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
+.add-item-container .add-button:hover,
+.add-item-container .cancel-button:hover,
 #cancel-delete-button:hover,
 #add-item-button:hover,
 #delete-item-button:hover {
     background-color: white;
-}
-
-.add-item-container .add-button:hover,
-.add-item-container .cancel-button:hover {
-    background-color: #0c885e;
 }
 
 .delete-items-container {
