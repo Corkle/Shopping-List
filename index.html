@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
     <script src="//code.jquery.com/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
     <script src="js/app.js"></script>
     <!--    <link href='css/font-awesome.min.css' rel='stylesheet'>-->
 
@@ -38,26 +39,29 @@
                     <li>
                         <div id='confirm-delete-button' style="display: none"><i class="fa fa-trash"></i>
                         </div>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
         </div>
 
         <div class='add-item-container'>
-            <div>
-                <div class='add-button'>
-                    <p>ADD</p>
+                <div>
+                    <div class='button add-button'>
+                        <p>ADD</p>
+                    </div>
+                    <div class='button cancel-button'><i class="fa fa-times"></i>
+                    </div>
+                    <input type='text' id='add-item-textbox'>
                 </div>
-                <div class='cancel-button'><i class="fa fa-times"></i>
+                <div class='add-item-text'>
+                    <p>Enter a new item in the textbox, then click ADD</p>
                 </div>
-                <input type='text' id='add-item-textbox'>
-            </div>
         </div>
 
         <div class='delete-items-container' style='display: none'>
             <div>
                 <div class='delete-items-text'>
-                    <p>Select items to remove and then click the delete button</p>
+                    <p>Select items to remove, then click the delete button</p>
                 </div>
             </div>
         </div>
@@ -72,43 +76,12 @@
                 <p>Apples</p>
             </li>
             <li>
-               <div>
                 <div class='delete-checkbox'><i class="fa fa-times"></i>
                 </div>
                 <div class='checkbox'><i class="fa fa-check"></i>
                 </div>
                 <p>Oranges</p>
-                </div>
             </li>
-            <li class='item-checked'>
-                <div class='delete-checkbox'><i class="fa fa-times"></i>
-                </div>
-                <div class='checkbox'><i class="fa fa-check"></i>
-                </div>
-                <p>Bananas</p>
-            </li>
-            <li>
-                <div class='delete-checkbox'><i class="fa fa-times"></i>
-                </div>
-                <div class='checkbox'><i class="fa fa-check"></i>
-                </div>
-                <p>Soup</p>
-            </li>
-            <li class='item-checked'>
-                <div class='delete-checkbox'><i class="fa fa-times"></i>
-                </div>
-                <div class='checkbox'><i class="fa fa-check"></i>
-                </div>
-                <p>Nails</p>
-            </li>
-            <li>
-                <div class='delete-checkbox'><i class="fa fa-times"></i>
-                </div>
-                <div class='checkbox'><i class="fa fa-check"></i>
-                </div>
-                <p>Pizza</p>
-            </li>
-
         </ul>
 
     </div>
