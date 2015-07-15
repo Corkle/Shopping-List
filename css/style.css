@@ -26,7 +26,6 @@ COLORS:
     font-size: 28px;
     color: #262626;
     font-family: 'Shadows Into Light Two', cursive;
-/*    font-family: 'Indie Flower', cursive;*/
 }
 
 .button {
@@ -151,13 +150,9 @@ COLORS:
     font-size: 88px;
     letter-spacing: 5px;
     color: #FF530D;
-/*    text-shadow: 2px 2px 5px #2B3A42;*/
     padding: 0;
-    margin: 40px 0 20px 40px;
-/*    font-family: 'Shadows Into Light Two', cursive;*/
+    margin: 40px 0 15px 40px;
     font-family: 'Amatic SC', cursive;
-    font-weight: bold;
-/*    text-transform: uppercase;*/
 }
 
 .delete-checkbox i,
