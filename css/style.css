@@ -44,10 +44,11 @@ COLORS:
     text-align: center;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .item-list {
@@ -84,10 +85,11 @@ COLORS:
     overflow: hidden;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .item-list li > div {
@@ -162,10 +164,11 @@ COLORS:
     text-align: center;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .item-checked .checkbox {
@@ -233,10 +236,11 @@ li.delete-item-checked p {
     margin: 0 auto;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .empty-list-notice p {
@@ -281,10 +285,11 @@ li.delete-item-checked p {
     display: inline-block;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
     float: right;
 }
 
@@ -293,10 +298,11 @@ li.delete-item-checked p {
     display: inline-block;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .add-item-container .add-button {
@@ -351,10 +357,11 @@ li.delete-item-checked p {
     margin: 0 auto;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -msie-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);    
     -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .delete-items-text p {
