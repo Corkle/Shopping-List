@@ -65,7 +65,7 @@ function main() {
                 $('#cancel-delete-button').click();
             } else {
                 $('.delete-items-container').effect('highlight', {
-                    color: '#e95b5b'
+                    color: '#BDD4DE'
                 }, 1000);
             }
         })
@@ -79,7 +79,7 @@ function main() {
                 $('.cancel-button').click();
             } else {
                 $('#add-item-textbox').focus();
-                $('.add-item-text').show()
+                $('.add-item-text').show();
             }
         })
         .on('keypress', '#add-item-textbox', function (e) {
