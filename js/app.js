@@ -15,7 +15,7 @@ function setTopBarButtons() {
 
 function main() {
     var viewState = true;
-    
+
     setTopBarButtons();
 
     $('.top-buttons-bar')
@@ -70,7 +70,6 @@ function main() {
             }
         })
 
-
     $('.add-item-container')
         .on('click', '.add-button', function () {
             var newItemText = $('#add-item-textbox').val();
@@ -82,8 +81,10 @@ function main() {
                 $('.add-item-text').show();
             }
         })
-        .on('keypress', '#add-item-textbox', function (e) {
-            if (e.which === 13) {
+        .on('keydown', '#add-item-textbox', function (e) {
+            if (e.ctrlKey && (e.which === 13 || e.which === 10)) {
+                $('.add-button').click();
+            } else if (e.which === 13 || e.which === 10) {
                 $('.add-button').click();
             }
         })
@@ -97,6 +98,7 @@ function main() {
 
 
     $('.item-list')
+        .sortable()
         .on('click', '.checkbox', function () {
             if ($(this).parent().hasClass('item-checked')) {
                 $(this).parent().removeClass('item-checked');
@@ -111,10 +113,30 @@ function main() {
                 $(this).parent().addClass('delete-item-checked');
             }
         })
-    
-    $(document).on('keypress', function(e) {
-        if( viewState && e.ctrlKey && (e.which === 13 || e.which === 10)) {
-            $('#add-item-button').click();
-        }
-    })
+
+    $(document)
+        .on('keypress', function (e) {
+            if (viewState && e.ctrlKey && (e.which === 13 || e.which === 10)) {
+                $('#add-item-button').click();
+            }
+        })
+        .keyup(function (e) {
+            if (e.which === 27) {
+                if ($('.add-item-container').is(':visible')) {
+                    $('.cancel-button').click();
+                }
+                if ($('.delete-items-container').is(':visible')) {
+                    $('#cancel-delete-button').click();
+                }
+            }
+        })
+        .on('keydown', function (e) {
+            if (e.which === 46) {
+                if (viewState && $('.item-list li').length > 0) {
+                    $('#delete-item-button').click();
+                } else if ($('.delete-items-container').is(':visible')) {
+                    $('#confirm-delete-button').click();
+                }
+            }
+        })
 }

@@ -30,7 +30,7 @@ COLORS:
 
 .button {
     background-color: #2B3A42;
-    border: 4px solid #BDD4DE;
+    border: 3px solid #BDD4DE;
 }
 
 .button p,
@@ -276,9 +276,9 @@ li.delete-item-checked p {
 }
 
 .add-item-container div input {
-    font-size: 50px;
+    font-size: 55px;
     width: 55%;
-    border: 3px solid #2B3A42;
+    border: 3px solid #BDD4DE;
     box-shadow: inset 1px 1px 2px 0 #2B3A42;
     text-align: center;
     padding: 5px;
@@ -291,6 +291,10 @@ li.delete-item-checked p {
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
     float: right;
+}
+
+.add-item-container div input:focus {
+    outline-color: #2B3A42;
 }
 
 .add-item-container div .button {
