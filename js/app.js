@@ -34,6 +34,7 @@ function main() {
             $('.item-list > li').addClass('delete-mode');
             $(this).hide();
             $('#add-item-button').hide();
+            $('#reset-delete-button').show();
             $('#cancel-delete-button').show();
             $('#confirm-delete-button').show();
             $('.item-list .checkbox').hide();
@@ -44,6 +45,7 @@ function main() {
             $('.delete-items-container').hide();
             $('.item-list > li').removeClass('delete-mode');
             $(this).hide();
+            $('#reset-delete-button').hide();
             $('#confirm-delete-button').hide();
             $('.item-list .delete-checkbox').hide();
             $('.item-list .checkbox').show();
@@ -72,9 +74,25 @@ function main() {
                 }, 1000);
             }
         })
+        .on('click', '#reset-delete-button', function () {
+            $('#reset-alert').show();
+        })
         .on('click', '.button', function () {
             $('.item-list li').removeClass('selected');
         })
+
+    $('#reset-alert')
+        .on('click', '#confirm-reset-no', function () {
+            $('#reset-alert').hide();
+        })
+        .on('click', '#confirm-reset-yes', function () {
+            $('.item-list li').each(function () {
+                $(this).remove();
+                $('#cancel-delete-button').click();
+                $('#reset-alert').hide();
+            })
+        })
+
 
     $('.add-item-container')
         .on('click', '.add-button', function () {

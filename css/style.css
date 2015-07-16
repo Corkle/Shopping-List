@@ -31,6 +31,7 @@ COLORS:
 .button {
     background-color: #2B3A42;
     border: 3px solid #BDD4DE;
+    border-radius: 25%;
 }
 
 .button p,
@@ -143,7 +144,6 @@ COLORS:
     font-size: 55px;
     height: 70px;
     width: 70px;
-    border-radius: 25%;
     margin: 0 10px;
 }
 
@@ -337,15 +337,6 @@ li.delete-item-checked p {
     padding: 10px;
 }
 
-.add-item-container .add-button:hover,
-.add-item-container .cancel-button:hover,
-#cancel-delete-button:hover,
-#add-item-button:hover,
-#confirm-delete-button:hover,
-#delete-item-button:hover {
-    background-color: #EFEFEF;
-}
-
 .delete-items-container {
     height: 90px;
     background-color: #2B3A42;
@@ -396,7 +387,61 @@ li.delete-item-checked p {
     background-color: black;
 }
 
+.popup-alert .button:hover,
+#confirm-delete-button:hover,
+.add-item-container .button:hover,
+.top-buttons-bar .button:hover {
+    background-color: #EFEFEF;
+}
+
 .button:hover {
     cursor: pointer;
     cursor: hand;
+}
+
+.popup-alert {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.popup-container {
+    border: 5px solid #FF530D;
+    border-radius: 25px;
+    background-color: #3F5765;
+    text-align: center;
+    color: #BDD4DE;
+    font-weight: bold;
+    font-size: 38px;
+    width: 80%;
+    position: relative;
+    top: 30%;
+    margin: 0 auto;
+}
+
+.popup-container p {
+    width: 80%;
+    margin: 30px auto;
+}
+
+.popup-container ul {
+    width: 60%;
+    padding: 0;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.popup-container li {
+    display: inline-block;
+    margin: 0 50px;
+}
+
+.popup-container .button {
+    padding: 8px;
+    width: 60px;
+    text-align: center;
+    letter-spacing: 2px;
 }

@@ -47,10 +47,6 @@
                         <div class='button' title='Test'><i class="fa fa-cogs"></i>
                         </div>
                     </li>
-                    <li>
-                        <div class='button' title='Test'><i class="fa fa-cogs"></i>
-                        </div>
-                    </li>
 -->
                     <li>
                         <div class='button' id='add-item-button' title='New Item'><i class="fa fa-plus"></i>
@@ -59,6 +55,10 @@
                     <li>
                         <div class='button' id='cancel-delete-button' style="display: none" title='Cancel'><i class="fa fa-times"></i>
                             </div>
+                    </li>
+                    <li>
+                        <div class='button' id='reset-delete-button' style='display: none' title='Reset List'><i class="fa fa-refresh"></i>
+                        </div>
                     </li>
                     <li>
                         <div class='button' id='confirm-delete-button' style="display: none" title='Delete Selected'><i class="fa fa-trash"></i>
@@ -95,7 +95,16 @@
                 </div>
             </div>
         </div>
-
+        
+        <div id="reset-alert" class="popup-alert">
+            <div class="popup-container">
+                <p>Are you sure you want to reset the entire list?</p>
+                <ul class="popup-buttons">
+                    <li><div class='button' id='confirm-reset-yes'>Yes</div></li>
+                    <li><div class='button' id='confirm-reset-no'>No</div></li>
+                </ul>
+            </div>
+        </div>
 
         <ul class='item-list'>
             
