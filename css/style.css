@@ -73,6 +73,11 @@ COLORS:
     /*    box-sizing: border-box;*/
 }
 
+.item-list li.selected,
+.item-list li:focus {
+    background-color: #3F5765;
+}
+
 .item-list .delete-checkbox,
 .item-list .checkbox {
     background-color: #EFEFEF;
