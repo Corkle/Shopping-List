@@ -1,7 +1,6 @@
 body {
     background-color: #EFEFEF;
 }
-
 /*
 COLORS:
 #EBEBF2
@@ -45,7 +44,7 @@ COLORS:
     text-align: center;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -91,7 +90,7 @@ COLORS:
     overflow: hidden;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -169,7 +168,7 @@ COLORS:
     text-align: center;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -241,7 +240,7 @@ li.delete-item-checked p {
     margin: 0 auto;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -263,7 +262,7 @@ li.delete-item-checked p {
     margin: 20px auto 0 auto;
     border: 5px solid #2B3A42;
     border-radius: 50px;
-    box-shadow:  1px 1px 5px #000;
+    box-shadow: 1px 1px 5px #000;
 }
 
 .add-item-container > div:first-child {
@@ -290,7 +289,7 @@ li.delete-item-checked p {
     display: inline-block;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -307,7 +306,7 @@ li.delete-item-checked p {
     display: inline-block;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -357,7 +356,7 @@ li.delete-item-checked p {
     margin: 0 auto;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);    
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
@@ -387,6 +386,37 @@ li.delete-item-checked p {
     background-color: black;
 }
 
+.bottom-buttons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.bottom-buttons > div {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.bottom-buttons > div ul {
+    float: right;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.bottom-buttons .button {
+    width: 40px;
+    height: 40px;
+    opacity: .6;
+}
+
+.bottom-buttons .button:hover {
+    opacity: 1;
+}
+
+.bottom-buttons .button:active {
+    background-color: #EFEFEF;
+}
+
 .popup-alert .button:hover,
 #confirm-delete-button:hover,
 .add-item-container .button:hover,
@@ -412,6 +442,7 @@ li.delete-item-checked p {
     border: 5px solid #FF530D;
     border-radius: 25px;
     background-color: #3F5765;
+    box-shadow: 1px 2px 10px black;
     text-align: center;
     color: #BDD4DE;
     font-weight: bold;
@@ -420,6 +451,10 @@ li.delete-item-checked p {
     position: relative;
     top: 30%;
     margin: 0 auto;
+}
+
+#about-popup {
+/*    display: block;*/
 }
 
 .popup-container p {
@@ -440,8 +475,7 @@ li.delete-item-checked p {
 }
 
 .popup-container .button {
-    padding: 8px;
-    width: 60px;
+    padding: 8px 15px;
     text-align: center;
     letter-spacing: 2px;
 }

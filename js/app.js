@@ -93,7 +93,6 @@ function main() {
             })
         })
 
-
     $('.add-item-container')
         .on('click', '.add-button', function () {
             var newItemText = $('#add-item-textbox').val();
@@ -106,7 +105,7 @@ function main() {
             }
         })
         .on('keydown', '#add-item-textbox', function (e) {
-            if (e.ctrlKey && (e.which === 13 || e.which === 10)) {
+            if (e.ctrlKey && (e.which === 13 || e.which === 10)) { // Ctrl + Enter key pressed
                 $('.add-button').click();
             } else if (e.which === 13 || e.which === 10) {
                 $('.add-button').click();
@@ -148,21 +147,39 @@ function main() {
             }
         })
 
+    $('.bottom-buttons')
+        .on('click', '#about-button', function () {
+            $('#about-popup').show();
+        })
+
+    $('#about-popup')
+        .on('click', '#about-close-button', function () {
+            $('#about-popup').hide();
+        })
+
     $(document)
-        .on('keypress', function (e) { // Enter key pressed
-            if (viewState && e.ctrlKey && (e.which === 13 || e.which === 10)) {
+        .on('keypress', function (e) {
+            if (viewState && e.ctrlKey && (e.which === 13 || e.which === 10)) { // Ctrl + Enter key pressed
                 $('#add-item-button').click();
             }
         })
         .keyup(function (e) { // Escape key pressed
             if (e.which === 27) {
-                if ($('.add-item-container').is(':visible')) {
+                if ($('#about-popup').is(':visible')) {
+                    $('#about-close-button').click();
+                } else if ($('#reset-alert').is(':visible')) {
+                    $('#confirm-reset-no').click();
+                } else if ($('.add-item-container').is(':visible')) {
                     $('.cancel-button').click();
-                }
-                if ($('.delete-items-container').is(':visible')) {
+                } else if ($('.delete-items-container').is(':visible')) {
                     $('#cancel-delete-button').click();
                 }
                 $('.item-list li').removeClass('selected');
+            }
+            if (e.which === 13 || e.which === 10) { // Enter key pressed
+                if ($('#about-popup').is(':visible')) {
+                    $('#about-close-button').click();
+                }
             }
             if (e.which === 32) { // Spacebar key pressed
                 var $selected = $('.item-list li').filter('.selected');
@@ -175,15 +192,24 @@ function main() {
                 }
                 return false;
             }
-        })
-        .on('keydown', function (e) {
-            if (e.which === 46) {
-                if (viewState && $('.item-list li').length > 0) {
-                    $('#delete-item-button').click();
-                } else if ($('.delete-items-container').is(':visible')) {
-                    $('#confirm-delete-button').click();
+            if ($('.delete-items-container').is(':visible') && e.ctrlKey && e.which === 46) { // Ctrl + Del key pressed
+                $('#reset-delete-button').click();
+            }
+            if (e.which === 46) { // Delete key pressed
+                if (e.ctrlKey) {
+                    if ($('.delete-items-container').is(':visible')) {
+                        $('#reset-delete-button').click();
+                    }
+                } else {
+                    if (viewState && $('.item-list li').length > 0) {
+                        $('#delete-item-button').click();
+                    } else if ($('.delete-items-container').is(':visible')) {
+                        $('#confirm-delete-button').click();
+                    }
                 }
             }
+        })
+        .on('keydown', function (e) {
             if (e.which === 38 || e.which === 40) { // Up or Down arrow keys pressed
                 if ($('.item-list li.selected').length < 1) {
                     $('.item-list').find('li').first().addClass('selected');
