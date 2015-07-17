@@ -179,6 +179,8 @@ function main() {
             if (e.which === 13 || e.which === 10) { // Enter key pressed
                 if ($('#about-popup').is(':visible')) {
                     $('#about-close-button').click();
+                } else if ($('#reset-alert').is(':visible')) {
+                    $('#confirm-reset-yes').click();
                 }
             }
             if (e.which === 32) { // Spacebar key pressed
